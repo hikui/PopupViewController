@@ -15,6 +15,10 @@ class TestContentView: UIView, PopupContentViewType {
 
     weak var popupViewController: PopupViewController?
 
+    func setParentController(_ controller: PopupViewController) {
+        popupViewController = controller
+    }
+
     @IBAction func dismiss(_ sender: UIButton) {
         popupViewController?.dismiss(animated: true, completion: nil)
     }
