@@ -2,7 +2,7 @@ A view controller to pop up any views like `UIAlertController`.
 
 **Usage:**
 
-```
+```swift
 let contentView = UINib.init(nibName: "TestContentView", bundle: nil)
             .instantiate(withOwner: nil, options: nil).first as! TestContentView
 contentView.label.text = "long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text "
