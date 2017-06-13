@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol PopupContentViewType: class {
-    func setParentController(_ controller: PopupViewController)
+    weak var popupViewController: PopupViewController? { set get }
 }
 
 /// Pop up any view using PopupViewController.
@@ -48,7 +48,7 @@ public class PopupViewController: UIViewController {
         self.contentView = contentView
         super.init(nibName: nil, bundle: nil)
         self.animator = PopAnimator(popupViewController: self)
-        contentView.setParentController(self)
+        contentView.popupViewController = self
         self.modalPresentationStyle = .overFullScreen
         self.transitioningDelegate = self
     }
