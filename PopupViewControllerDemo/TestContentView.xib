@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TestContentView" customModule="PopupViewControllerDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="97"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zk0-86-6o5">
+                    <rect key="frame" x="0.0" y="0.0" width="316" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p93-dU-aLF">
+                    <rect key="frame" x="36" y="28.5" width="244" height="68.5"/>
+                    <state key="normal" title="Dismiss"/>
+                    <connections>
+                        <action selector="dismiss:" destination="iN0-l3-epB" eventType="touchUpInside" id="rvS-or-kLZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zk0-86-6o5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2Sx-R1-cG9"/>
+                <constraint firstItem="p93-dU-aLF" firstAttribute="top" secondItem="zk0-86-6o5" secondAttribute="bottom" constant="8" id="2si-6B-8jP"/>
+                <constraint firstAttribute="trailing" secondItem="zk0-86-6o5" secondAttribute="trailing" id="5yC-rJ-7b3"/>
+                <constraint firstItem="p93-dU-aLF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="Osd-Tn-bMr"/>
+                <constraint firstItem="zk0-86-6o5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="U0G-Fe-wXs"/>
+                <constraint firstAttribute="bottom" secondItem="p93-dU-aLF" secondAttribute="bottom" id="XNi-G8-JJZ"/>
+                <constraint firstAttribute="trailing" secondItem="p93-dU-aLF" secondAttribute="trailing" constant="36" id="jBI-ig-Zbh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="zk0-86-6o5" id="QJW-W1-CdA"/>
+            </connections>
+            <point key="canvasLocation" x="-5" y="-233.5"/>
+        </view>
+    </objects>
+</document>
