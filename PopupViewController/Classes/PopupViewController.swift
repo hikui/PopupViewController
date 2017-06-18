@@ -39,6 +39,8 @@ public class PopupViewController: UIViewController {
     public var marginTop: CGFloat = 0
     public var marginBottom: CGFloat = 0
 
+    public var fadeInAnimation = false
+
     /// Height of the popup view. By default it will be calculated by the auto layout constraints.
     public var contentViewHeight: CGFloat = UITableViewAutomaticDimension
 
@@ -156,9 +158,16 @@ fileprivate class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
         contentView.frame = beginFrame
 
+        if popupViewController.fadeInAnimation {
+            contentView.alpha = 0
+        }
+
         UIView.animate(withDuration: animateDuration, animations: {
             toViewController.view.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
             contentView.frame = endFrame
+            if self.popupViewController.fadeInAnimation {
+                contentView.alpha = 1
+            }
         }) { (_) in
             transitionContext.completeTransition(true)
         }
@@ -200,6 +209,9 @@ fileprivate class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: animateDuration, animations: {
             fromViewController.view.backgroundColor = .clear
             contentView.frame = endFrame
+            if self.popupViewController.fadeInAnimation {
+                contentView.alpha = 0
+            }
         }) { (_) in
             transitionContext.completeTransition(true)
         }
