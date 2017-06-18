@@ -27,9 +27,10 @@ class ViewController: UIViewController {
             .instantiate(withOwner: nil, options: nil).first as! TestContentView
         contentView.label.text = "long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text long text "
         let popupController = PopupViewController(contentView: contentView)
-        popupController.beginPosition = .belowBottom
-        popupController.endPosition = .bottom
+        popupController.beginPosition = .middle
+        popupController.endPosition = .middle
         popupController.marginBottom = 40
+        popupController.fadeInAnimation = true
         self.present(popupController, animated: true, completion: nil)
     }
 
