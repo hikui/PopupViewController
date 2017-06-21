@@ -64,6 +64,7 @@ public class PopupViewController: UIViewController {
 
         self.view.addSubview(contentView)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(backgroundOnTap(gestureRecognizer:)))
+        tapGestureRecognizer.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tapGestureRecognizer)
 
     }
