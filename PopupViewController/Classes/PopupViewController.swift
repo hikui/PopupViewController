@@ -73,6 +73,14 @@ public class PopupViewController: UIViewController {
     }
 
     func backgroundOnTap(gestureRecognizer: UITapGestureRecognizer) {
+        // Check if it didn't happen in the content view area.
+        let point = gestureRecognizer.location(in: self.view)
+        if point.x >= contentView.frame.minX
+            && point.x <= contentView.frame.maxX
+            && point.y >= contentView.frame.minY
+            && point.y <= contentView.frame.maxY {
+            return
+        }
         self.dismiss(animated: true, completion: nil)
     }
 }
