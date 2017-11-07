@@ -172,7 +172,7 @@ fileprivate class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
 
         UIView.animate(withDuration: animateDuration, animations: {
-            toViewController.view.backgroundColor = UIColor.init(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
+            toViewController.view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
             contentView.frame = endFrame
             if self.popupViewController.fadeInAnimation {
                 contentView.alpha = 1
